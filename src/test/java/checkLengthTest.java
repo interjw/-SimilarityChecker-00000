@@ -17,7 +17,7 @@ class checkLengthTest {
     }
 
     @Test
-    void isWrong() {
+    void isDoubleLength() {
         assertEquals(0, ck.getScore("A", "BB"));
     }
 

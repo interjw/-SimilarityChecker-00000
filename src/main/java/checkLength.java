@@ -2,7 +2,7 @@ public class checkLength {
 
     public static final int PART_SCORE = 60;
 
-    public double getScore(String input1, String input2) {
+    public int getScore(String input1, String input2) {
 
         int lenA = input1.length();
         int lenB = input2.length();
@@ -14,8 +14,9 @@ public class checkLength {
         }else {
             int maxLen = Math.max(lenA, lenB);
             int minLen = Math.min(lenA, lenB);
-            double result = ((1-((double)(maxLen-minLen)/minLen))* PART_SCORE);
-            return (int)result;
+            int gap = maxLen-minLen;
+            double logic = 1- (double)(gap)/minLen;
+            return (int)(logic* PART_SCORE);
         }
     }
 }
