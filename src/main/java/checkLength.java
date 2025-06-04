@@ -1,6 +1,7 @@
 public class checkLength {
 
     public static final int PART_SCORE = 60;
+    public static final int MAX_LEGNTH_SCORE = 60;
 
     public int getScore(String input1, String input2) {
 
@@ -8,7 +9,7 @@ public class checkLength {
         int lenB = input2.length();
 
         if(lenA == lenB) {
-            return 60;
+            return MAX_LEGNTH_SCORE;
         }else if((lenA >= 2 * lenB) || (lenB >= 2 * lenA)){
             return 0;
         }else {
